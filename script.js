@@ -160,51 +160,16 @@ function initializeScrollEffects() {
     });
 }
 
-// Animated counters for statistics
+// Animated counters for statistics (removed - no stats section)
 function initializeCounters() {
-    const counters = document.querySelectorAll('.counter-item');
-    
-    const observerOptions = {
-        threshold: 0.7
-    };
-    
-    const counterObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-                entry.target.classList.add('counted');
-                animateCounter(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    counters.forEach(counter => {
-        counterObserver.observe(counter);
-    });
+    // Counter functionality removed as statistics section was removed
+    return;
 }
 
+// Counter animation function (removed - no stats section)
 function animateCounter(element) {
-    const target = parseInt(element.dataset.target);
-    const numberElement = element.querySelector('.stat-number');
-    const duration = 2000; // 2 seconds
-    const step = target / (duration / 16); // 60fps
-    let current = 0;
-    
-    const timer = setInterval(() => {
-        current += step;
-        if (current >= target) {
-            current = target;
-            clearInterval(timer);
-        }
-        
-        // Format the number display
-        if (target === 24) {
-            numberElement.textContent = Math.floor(current) + '/7';
-        } else if (target >= 1000) {
-            numberElement.textContent = Math.floor(current).toLocaleString() + '+';
-        } else {
-            numberElement.textContent = Math.floor(current) + '+';
-        }
-    }, 16);
+    // Counter animation removed as statistics section was removed
+    return;
 }
 
 // Contact form functionality
