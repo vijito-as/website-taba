@@ -169,18 +169,18 @@ function initializeContactForm() {
             
             // Validate form
             if (!validateContactForm(this)) {
-                showNotification('Please fill in all required fields correctly', 'error');
+                showNotification('Mohon lengkapi semua field yang diperlukan dengan benar', 'error');
                 return;
             }
             
             // Show loading state
-            submitBtn.innerHTML = '<span>Processing...</span><div class="submit-arrow">⟳</div>';
+            submitBtn.innerHTML = '<span>Memproses...</span><div class="submit-arrow">⟳</div>';
             submitBtn.disabled = true;
             submitBtn.classList.add('loading');
             
             // Simulate API call
             setTimeout(() => {
-                showNotification('Thank you! Our technical team will contact you within 24 hours for detailed consultation.', 'success');
+                showNotification('Terima kasih! Tim teknis kami akan menghubungi Anda dalam 24 jam untuk konsultasi detail.', 'success');
                 this.reset();
                 
                 // Reset button
