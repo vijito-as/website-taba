@@ -425,28 +425,35 @@ body {
 
 .card-header {
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
     margin-bottom: 1.5rem;
 }
 
 .card-icon {
-    font-size: 2.5rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-dark);
 }
 
 .card-category {
-    font-size: 0.8rem;
-    font-weight: 700;
+    font-size: 0.75rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--primary-red);
+    margin-top: -0.25rem;
 }
 
 .card-title {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.1rem;
+    font-weight: 600;
     margin-bottom: 1rem;
     color: var(--text-dark);
+    line-height: 1.4;
 }
 
 .card-features {
@@ -534,21 +541,25 @@ body {
 }
 
 .feature-icon {
-    font-size: 2rem;
+    font-size: 0.9rem;
+    font-weight: 700;
     color: var(--primary-red);
     flex-shrink: 0;
+    min-width: 80px;
+    text-align: left;
 }
 
 .feature-content h4 {
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 600;
     margin-bottom: 0.5rem;
     color: var(--text-primary);
 }
 
 .feature-content p {
     color: var(--text-secondary);
-    line-height: 1.6;
+    line-height: 1.5;
+    font-size: 0.9rem;
 }
 
 .tech-visual {
@@ -652,19 +663,26 @@ body {
 
 .contact-item {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     align-items: flex-start;
+    text-align: left;
 }
 
 .contact-icon {
-    font-size: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 700;
     color: var(--primary-red);
     flex-shrink: 0;
     margin-top: 0.25rem;
+    min-width: 80px;
+}
+
+.contact-text {
+    flex: 1;
 }
 
 .contact-label {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -674,7 +692,8 @@ body {
 
 .contact-value {
     color: var(--text-dark);
-    line-height: 1.6;
+    line-height: 1.5;
+    font-size: 0.95rem;
 }
 
 .contact-form {
